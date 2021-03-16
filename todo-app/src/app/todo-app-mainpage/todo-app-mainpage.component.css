@@ -1,13 +1,17 @@
-
+img {
+  margin-top: 5px;
+  margin-bottom:5px;
+  width: 40%;
+}
 
 .toolbar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 92px;
   display: grid;
-  grid-auto-columns: 150px 150px 150px auto auto 128px;
+  grid-auto-columns: 220px 150px 150px auto auto 128px;
   background-color: #06427d;
   color: white;
   font-weight: 600;
@@ -21,7 +25,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 45px;
   display: grid;
   font-weight: 600;
   border-top:1px solid;
