@@ -9,5 +9,11 @@
 }
 
 body {
-  background-color: #dae0e5;
+ /* background-color: #dae0e5;*/
+  background: rgb(15,71,126);
+  background: linear-gradient(0deg, rgba(15,71,126,1) 0%, rgba(218,224,229,1) 90%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

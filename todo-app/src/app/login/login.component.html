@@ -1,1 +1,27 @@
-<p >login works!</p>
+
+<div class="container">
+  <div class="container m-4 " >
+    <div class="card">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label class="form-check-label"><input type="checkbox"> Remember me</label>
+          </div>
+          <a routerLink="/app" class="btn sign-in "><fa-icon [icon]="'sign-in-alt'" class="text-white"></fa-icon> <div style="display:flex; margin:auto; text-align: center;">Sign in</div></a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

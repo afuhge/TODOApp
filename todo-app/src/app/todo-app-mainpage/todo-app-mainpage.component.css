@@ -5,7 +5,6 @@ img {
 }
 
 .toolbar {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -17,7 +16,15 @@ img {
   font-weight: 600;
   align-items: center;
   border-bottom: 2px solid #085caf;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
 
+
+}
+
+.logout img {
+  width:50%;
+  border-radius: 50%;
 }
 
 .footer {
@@ -25,29 +32,47 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 45px;
-  display: grid;
-  font-weight: 600;
-  border-top:1px solid;
+  height: 40px;
+  font-size: 14px;
   align-items: center;
   color: #a2a9ae;
-  grid-template-columns: 400px auto 400px;
-  grid-gap: 10px;
+  display:flex;
+  background-color: #06427d;
 
+}
+
+.logout button:active{
+  background-color: #8fb2d6;
+}
+
+.logout button a:active {
+  background-color: #8fb2d6;
 }
 
 .copyright {
   padding-left: 20px;
-  grid-column: 1;
+  flex-direction: row;
+  width:60%;
+  font-size: 12px;
 }
  .imprint_policy {
-   grid-column:2;
-   display: grid;
-   grid-template-columns: auto auto;
-   align-items: center;
-   text-align: center;
+   display:grid;
+   grid-template-columns: 100px 100px;
  }
 
+ .imprint_policy a:hover{
+   color: white;
+ }
+
+ .policy {
+   grid-column: 2;
+ }
+
+ .imprint {
+   grid-column: 1;
+ }
+
+.bar { font-size: 20px; }
 
 .footer  a {
   color: #a2a9ae;
