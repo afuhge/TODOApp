@@ -2,18 +2,36 @@
   background-color: white;
 }
 tbody tr:hover{
-  background-color: #8fb2d6;
+  padding-bottom: 0.25rem;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 .table-header{
-  background-color: #06427d;
-color:white;
+  background-color: #77b9b9;
+color:#234343;
 }
+
+button:hover {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.actions {
+  background-color: #77b9b9;
+  color: #234343;
+  transition: linear background 0.2s;
+}
+.actions:hover{
+  color:white;
+}
+
 
 table {
   box-shadow:4px 4px 10px rgba(0,0,0,0.2);
 }
 
+.table-bordered td, .table-bordered th {
+  border: 1px solid #77b9b9;
+}
 
 .card-body{
   background-color: #f3f3f3;
@@ -24,4 +42,8 @@ table {
 .card {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.color-badge {
+  width: 60px;
 }

@@ -1,6 +1,6 @@
 .card-header {
-  background-color: #06427d;
-  color:white;
+  background-color: #77b9b9;
+  color:#234343;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -17,14 +17,18 @@
 }
 
 .sign-in {
-  background-color: #06427d;
-  color:white;
+  background-color: #77b9b9;
+  color:#234343;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   font-size: 14px;
   text-align: center;
   display: flex;
   width:15%;
 
+}
+
+.sign-in:hover{
+  color:white;
 }
 
 

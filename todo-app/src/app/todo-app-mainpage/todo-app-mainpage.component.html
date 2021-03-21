@@ -1,41 +1,38 @@
 <div>
-  <div class="container mt-2">
-    <div class="toolbar" role="banner">
-      <div class="grid-item1">
-        <a routerLink="/app/today"><img alt="TODO App Logo"  src="./assets/todoapp_128.png"/><b style="padding-left: 10px;">TODO App</b></a>
+  <div class="toolbar" role="banner">
+    <div class="container toolbar-container">
+      <div class="grid-item1 links">
+        <img alt="TODO App Logo" src="./assets/todoapp_128.png"/>
+        <a routerLink="/app/today"><b>TODO App</b></a>
       </div>
-      <div class="todolist grid-item2">
-        <a routerLink="/app/todos"><fa-icon [icon]="'list'"></fa-icon> TODOLists</a>
+      <div class="todolist grid-item2 links">
+        <a routerLink="/app/todos">
+          <fa-icon [icon]="'list'"></fa-icon>
+          TODOLists</a>
       </div>
-      <div class="users grid-item3">
-        <a routerLink="/app/users"><fa-icon [icon]="'users'"></fa-icon> Users</a>
+      <div class="users grid-item3 links">
+        <a routerLink="/app/users">
+          <fa-icon [icon]="'users'"></fa-icon>
+          Users</a>
       </div>
       <div class="logout grid-item4">
-        <div ngbDropdown >
-          <a class="btn" ngbDropdownToggle><img alt="profile picture"  src="./assets/todoapp_128.png"/> </a>
+        <div ngbDropdown>
+          <a class="btn" ngbDropdownToggle><img alt="profile picture" src="./assets/todoapp_128.png"/> </a>
           <div ngbDropdownMenu>
-            <button ngbDropdownItem> <fa-icon [icon]="'cog'"></fa-icon> <a routerLink="/app/settings" class="text-secondary"> Settings</a></button>
-            <button ngbDropdownItem><fa-icon [icon]="'sign-out-alt'"></fa-icon> <a routerLink="/login" class="text-secondary"> Logout</a></button>
+            <button ngbDropdownItem>
+              <fa-icon [icon]="'cog'"></fa-icon>
+              <a routerLink="/app/settings" class="text-secondary"> Settings</a></button>
+            <button ngbDropdownItem>
+              <fa-icon [icon]="'sign-out-alt'"></fa-icon>
+              <a routerLink="/login" class="text-secondary"> Logout</a></button>
           </div>
         </div>
       </div>
     </div>
 
-  <router-outlet></router-outlet>
-
-  <div class="footer" role="footer">
-    <div class="copyright">
-      <div><fa-icon [icon]="'copyright'"></fa-icon> 2021 Annika Fuhge. All rights reserved. </div>
-    </div>
-    <div class="imprint_policy flex flex-justify-center">
-      <div imprint>
-        <a routerLink="/app/imprint">Imprint </a>
-      </div>
-      <div class="policy ">
-        <a routerLink="/app/policy" >Policy</a>
-      </div>
-    </div>
   </div>
+  <div class="container mt-2">
+    <router-outlet></router-outlet>
   </div>
 </div>
 

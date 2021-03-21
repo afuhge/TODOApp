@@ -1,0 +1,18 @@
+
+  <div class="card">
+    <div class="card-header modal-header">
+      Delete User
+    </div>
+    <div class="card-body">
+      Do you really want to delete this user?
+      <div *ngIf="hasError" class="alert alert-danger">Error: Delete User didn't work.</div>
+    </div>
+    <div class="card-footer">
+      <div class="mt-2 a d-flex justify-content-end">
+        <button class="btn mr-1" (click)="activeModal.dismiss('cancel button click')">Cancel</button>
+
+        <button class="btn close-button" (click)="delete()" ngbAutofocus ><fa-icon [icon]="'trash-alt'"></fa-icon><span class="ml-2">Delete User</span></button>
+      </div>
+    </div>
+  </div>
+

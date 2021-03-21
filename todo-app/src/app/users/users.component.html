@@ -1,44 +1,34 @@
-<div class="container">
-  <h2>User Management</h2>
+  <h2 class="view-title">User Management</h2>
 
   <div class=" card table-container">
     <div class="card-body">
-      <div>All(#users)</div>
-      <table class="table table-bordered" >
+      <div>All({{users.length}})</div>
+      <div class="btn-group"><button class="btn actions" (click)= "addUser()"><fa-icon [icon]="'user-plus'" fixedWidth></fa-icon><span class="ml-2">Add User</span></button></div>
+      <div>Searchbar + search button (TODO)</div>
+      <table class="table table-bordered mb-0 " >
         <thead class=" table-header">
         <tr>
-          <th scope="col">#</th>
           <th scope="col">First name</th>
           <th scope="col">Last name</th>
+          <th scope="col">Email</th>
           <th scope="col">Color</th>
           <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>green</td>
-          <td>todo: buttons</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Blah</td>
-          <td>green</td>
-          <td>todo: buttons</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry the Bird</td>
-          <td>xxx</td>
-          <td>green</td>
-          <td>todo: buttons</td>
+        <tr *ngFor="let user of users">
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
+          <td> <div class="badge p-2 color-badge" [style.background-color]="user.color">&nbsp;</div></td>
+          <td><div class="btn-group">
+            <button  class="mr-1 btn actions" (click)= "editUser(user)"><fa-icon [icon]="'edit'" fixedWidth></fa-icon></button>
+            <button (click)= "deleteUser(user)" class="btn actions"><fa-icon [icon]="'trash-alt'" fixedWidth></fa-icon></button>
+            </div>
+          </td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-</div>

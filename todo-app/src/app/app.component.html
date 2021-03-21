@@ -7,4 +7,19 @@
 
 <div class="content" role="main">
   <router-outlet></router-outlet>
+  <div class="footer" role="footer">
+    <div class="container d-flex flex-row align-items-center">
+      <div class="copyright flex-grow-1">
+        <div>
+          <fa-icon [icon]="'copyright'"></fa-icon>
+          2021 Annika Fuhge. All rights reserved.
+        </div>
+      </div>
+      <div class="imprint_policy flex-shrink-0">
+        <a routerLink="/app/imprint">Imprint </a>
+        <span class="span">|</span>
+        <a routerLink="/app/policy">Policy</a>
+      </div>
+    </div>
+  </div>
 </div>
