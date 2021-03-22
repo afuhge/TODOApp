@@ -30,9 +30,11 @@ export class UserService {
 
   /** POST: add a new user to the server */
   addUser(user: User): Observable<User> {
+    console.log('add user method:', user);
     return this.http.post<User>(this.usersUrl, user, this.httpOptions).pipe(
-      tap((newUser: User) => console.log(`added hero w/ id=${newUser.id}`)),
-      catchError(this.handleError<User>('addHero'))
+      tap((newUser: User) => console.log(`pre added user w/ id=${newUser.id}`, newUser)),
+      map((newUser: any) => new User(newUser._id, newUser._firstname, newUser._lastname, newUser._email, newUser._password, newUser._color)),
+      catchError(this.handleError<User>('addUser'))
     );
   }
 
@@ -49,9 +51,12 @@ export class UserService {
 
   /** PUT: update the hero on the server */
   updateUser(user: User): Observable<any> {
-    return this.http.put(this.usersUrl, user, this.httpOptions).pipe(
-      tap(_ => console.log(`updated hero id=${user.id}`)),
-      catchError(this.handleError<any>('updateHero'))
+    console.log('user:', user);
+
+    return this.http.put(this.usersUrl, user.toJson(), this.httpOptions).pipe(
+      tap(_ => console.log(`updated user id=${user.id}`)),
+      map(((_) => user)),
+      catchError(this.handleError<any>('updateUser'))
     );
   }
 

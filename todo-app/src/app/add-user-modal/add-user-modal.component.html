@@ -1,1 +1,40 @@
-<p>add-user-modal works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="card">
+    <div class="card-header modal-header primary-bg-color">
+      Edit User
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="mr-2">First name</label>
+        <input  class="form-control " type="text" formControlName="firstname"  [class.is-invalid]="form.controls.firstname.errors" [class.is-valid]="!form.controls.firstname.errors" placeholder="John">
+        <small class="text-danger" *ngIf="form.controls.firstname.errors &&
+        form.controls.firstname.hasError('required')">Error: First name should not be empty.</small>
+      </div>
+      <div class="form-group">
+        <label class="mr-2">Last name</label>
+        <input  class="form-control" type="text"  formControlName="lastname" [class.is-invalid]="form.controls.lastname.errors"  [class.is-valid]="!form.controls.lastname.errors" placeholder="Doe"/>
+        <small class="text-danger" *ngIf="form.controls.lastname.errors &&
+        form.controls.lastname.hasError('required')">Error: Last name should not be empty.</small>
+      </div>
+      <div class="form-group">
+        <label class="mr-2">Email</label>
+        <input  class="form-control" type="email" formControlName="email" [class.is-invalid]="form.controls.email.errors"  [class.is-valid]="!form.controls.email.errors" placeholder="john.doe@gmail.com"/>
+        <small class="text-danger" *ngIf="form.controls.email.errors">Error: Email should not be empty.</small>
+      </div>
+      <div class="form-group">
+        <label class="mr-2">Color</label>
+        <input  class="form-control" style="width:100px;" type="color" formControlName="color" [class.is-invalid]="form.controls.color.errors" [class.is-valid]="!form.controls.color.errors"/>
+        <small class="text-danger" *ngIf="form.controls.color.errors &&
+        form.controls.color.hasError('required')">Error: Color should not be empty.</small>
+      </div>
+      <div *ngIf="hasError" class="alert alert-danger">Error: Delete User didn't work.</div>
+    </div>
+    <div class="card-footer">
+      <div class="mt-2 a d-flex justify-content-end">
+        <button class="btn mr-1" (click)="activeModal.dismiss('cancel button click')"><span class="text-color">Cancel</span></button>
+        <button type="submit" [disabled]="!form.valid" class="btn close-button primary-bg-color" ngbAutofocus ><fa-icon [icon]="'user-plus'"></fa-icon><span class="ml-2 text-color">Add User</span></button>
+      </div>
+    </div>
+  </div>
+</form>
+

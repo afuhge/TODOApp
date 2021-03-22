@@ -32,4 +32,14 @@ export class User {
     private _password: string,
     private _color: string) {}
 
+  toJson(): any {
+    return {
+      id: this.id,
+      firstname: this.firstname,
+      lastname: this.lastname,
+      email: this.email,
+      password: this.password,
+      color: this.color
+    };
+  }
 }

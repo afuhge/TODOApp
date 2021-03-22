@@ -24,6 +24,7 @@ import {InMemoryDataService} from './in-memory-data-service';
 import { AddUserModalComponent } from './add-user-modal/add-user-modal.component';
 import { EditUserModalComponent } from './edit-user-modal/edit-user-modal.component';
 import { DeleteUserModalComponent } from './delete-user-modal/delete-user-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { DeleteUserModalComponent } from './delete-user-modal/delete-user-modal.
     FontAwesomeModule,
     HttpClientModule,
     NgbModalModule,
+    ReactiveFormsModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

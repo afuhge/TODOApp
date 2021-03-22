@@ -29,3 +29,11 @@ body {
   letter-spacing: .125rem;
   border-bottom: 2px solid  rgba(255,255,255,0.8);
 }
+
+.primary-bg-color {
+  background-color: #77b9b9;
+}
+
+.text-color {
+  color: #234343;
+}

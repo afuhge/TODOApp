@@ -10,10 +10,10 @@ import {Task} from './task';
 export class InMemoryDataService implements  InMemoryDbService {
     createDb(){
       const users = [
-        new User(1, 'Annika', 'Fuhge', 'a.fuhge@blah.com', '12345', 'green'),
-        new User(2, 'Anni', 'fuh', 'a.fuhge@blah.com', '12345', 'blue'),
-        new User(3, 'Anni3', 'fuu', 'a.fuhge@blah.com', '12345', 'red'),
-        new User(4, 'Annika', 'fu', 'a.fuhge@blah.com', '12345', 'yellow'),
+        new User(1, 'Annika', 'Fuhge', 'a.fuhge@blah.com', '12345', '#000000'),
+        new User(2, 'Anni', 'fuh', 'a.fuhge@blah.com', '12345', '#ffffff'),
+        new User(3, 'Anni3', 'fuu', 'a.fuhge@blah.com', '12345', '#7749ff'),
+        new User(4, 'Annika', 'fu', 'a.fuhge@blah.com', '12345', '#aaaaaa'),
       ];
 
       const tasks = [

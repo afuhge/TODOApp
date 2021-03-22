@@ -32,8 +32,9 @@ export class UsersComponent implements OnInit {
   addUser(): void {
     const modalDialog = this.modalService.open(AddUserModalComponent);
     modalDialog.result
-      .then(() => {
-        console.log('added user');
+      .then((newUser) => {
+        console.log('added user', newUser);
+        this.users.push(newUser);
       }).catch(() => {});
   }
 
@@ -41,8 +42,10 @@ export class UsersComponent implements OnInit {
     const modalDialog = this.modalService.open(EditUserModalComponent);
     modalDialog.componentInstance.user = user;
     modalDialog.result
-      .then(() => {
+      .then((newUser) => {
         console.log('editted user');
+        const index = this.users.indexOf(user);
+        this.users[index] = newUser;
       }).catch(() => {});
   }
 
